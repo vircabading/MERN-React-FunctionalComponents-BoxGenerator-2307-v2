@@ -2,6 +2,7 @@ import './App.css';
 import React, { useState } from 'react';
 
 import NavBarView from './views/NavBarView';
+import ColorFormView from './views/ColorFormView';
 
 ///////////////////////////////////////////////////
 //  Main Application
@@ -30,9 +31,10 @@ const App = (props) => {
           <hr />
           <p>Box Color Array: { JSON.stringify( boxColorArray ) }</p>
           <hr />
-          {/* <ColorFormView 
+          {/* ***** Color Form Section ************ */}
+          <ColorFormView 
             addNewColor={ addNewColor } />
-          <BoxView 
+          {/* <BoxView 
             boxColorArray={ boxColorArray } /> */}
         </div>
       </div>
