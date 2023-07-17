@@ -1,0 +1,13 @@
+import React from 'react'
+
+///////////////////////////////////////////////////
+//  Box Component
+///////////////////////////////////////////////////
+
+const BoxComp = (props) => {
+  return (
+    <div>{ props.color }x</div>
+  )
+}
+
+export default BoxComp;
