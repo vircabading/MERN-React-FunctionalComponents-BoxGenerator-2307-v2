@@ -1,6 +1,8 @@
 import './App.css';
 import React, { useState } from 'react';
 
+import NavBarView from './views/NavBarView';
+
 ///////////////////////////////////////////////////
 //  Main Application
 ///////////////////////////////////////////////////
@@ -21,7 +23,7 @@ const App = (props) => {
 
   return (
     <main>
-      {/* <NavBarView /> */}
+      <NavBarView />
       <div className='container mt-4 text-dark-color'>
         <div className='row bg-white p-3 round'>
           <h3>Main Display Area</h3>
