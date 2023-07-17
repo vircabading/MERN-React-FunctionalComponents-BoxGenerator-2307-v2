@@ -1,24 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
 
-function App() {
+///////////////////////////////////////////////////
+//  Main Application
+///////////////////////////////////////////////////
+
+const App = (props) => {
+  const [boxColorArray, setBoxColorArray] = useState([]);
+
+  /**
+   * Adds a new color to the box color array
+   * @param {String} newColor 
+   */
+  const addNewColor = (newColor) => {
+    console.log("**** In Add New Color ********");
+    console.log(`New Color: ${newColor}`);
+    setBoxColorArray( (boxColorArray => [...boxColorArray, newColor]) );
+    console.log(`Color Array: ${ boxColorArray }`);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      {/* <NavBarView /> */}
+      <div className='container mt-4 text-dark-color'>
+        <div className='row bg-white p-3 round'>
+          <h3>Main Display Area</h3>
+          <hr />
+          <p>Box Color Array: { JSON.stringify( boxColorArray ) }</p>
+          <hr />
+          {/* <ColorFormView 
+            addNewColor={ addNewColor } />
+          <BoxView 
+            boxColorArray={ boxColorArray } /> */}
+        </div>
+      </div>
+    </main>
   );
 }
 
