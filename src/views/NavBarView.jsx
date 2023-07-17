@@ -13,9 +13,11 @@ const NavBarView = () => {
                     {/* **** Site Title ******** */}
                     <h2 className='text-light-color'><strong>📦 Box Generator</strong></h2>
                     {/* **** Link to The Root of the Site ******** */}
-                        <li className='btn btn-sm round-btn bg-air-sup-blue'>
+                        <a 
+                            className='btn btn-sm round-btn bg-air-sup-blue'
+                            href='/' >
                             <strong className='text-white'>🏡 Home</strong>
-                        </li>
+                        </a>
                 </div>
             </div>
         </header>
